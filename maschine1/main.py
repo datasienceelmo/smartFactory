@@ -1,30 +1,34 @@
 #!/usr/bin/env python
 # -*- coding: utf8 -*-
 
-#import read as R
-#import Write as W
-#import Write_init as WI
-
-
-
+#Dauerschleife zum permanenten Beschreiben der Transponder
 while True:
+    print "\nBitte Produktfarbe (Kleinbuchstaben) eingeben"
+    #Implementierung der Terminaleingabe 
     terminal_input = raw_input('Eingabe :')
+
+    #Ueberpruefung der Eingabe und Aufruf der entsprechenden Schreibdatei (wirte_Farbe)
     if terminal_input == "blau":
-        print "i bims blau"
+        print "Produkt blau: Bitte Transponder zum Beschreiben auf das Lesegerät halten"
         import write_blue
+        print "Schreibvorgang abgeschlossen"
 
     elif terminal_input == "rot":
-        print "i bims rot"
+        print "Produkt rot: Bitte Transponder zum Beschreiben auf das Lesegerät halten"
         import write_red
+        print "Schreibvorgang abgeschlossen"
         
     elif terminal_input == "lila":
-        print "i bims lila"
+        print "Produkt lila: Bitte Transponder zum Beschreiben auf das Lesegerät halten"
         import write_purple
+        print "Schreibvorgang abgeschlossen"
         
     elif terminal_input == "gelb":
-        print "i bims gelb"
+        print "Produkt gelb: Bitte Transponder zum Beschreiben auf das Lesegerät halten"
         import write_yellow
-        
+        print "Schreibvorgang abgeschlossen"
+
+    #Ausgabe bei Falscheingabe
     else:
-        print "Produkt nicht produzierbar!!!"
+        print "Produkt nicht produzierbar. Derzeit koennen folgende Produkte produziert werden: \n blau, rot, lila, gelb"
 

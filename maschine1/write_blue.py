@@ -84,7 +84,7 @@ while continue_reading:
             MIFAREReader.MFRC522_Write(8, data)
             print "\n"
 
-            print "It is now empty:"
+            print "It now looks like this:"
             # Check to see if it was written
             print MIFAREReader.MFRC522_Read(8)
             print "\n"

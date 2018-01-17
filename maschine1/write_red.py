@@ -75,7 +75,7 @@ while continue_reading:
             print "\n"
 
             #Blaues Produkt
-            data = [11, 1, 0, 0 , 0]
+            data = [22, 2, 0, 0 , 0]
             # Fill the data with 0x00
             for x in range(0,16):
                 data.append(0x00)
@@ -84,7 +84,7 @@ while continue_reading:
             MIFAREReader.MFRC522_Write(8, data)
             print "\n"
 
-            print "It is now empty:"
+            print "It now looks like this:"
             # Check to see if it was written
             print MIFAREReader.MFRC522_Read(8)
             print "\n"
