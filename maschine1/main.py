@@ -7,7 +7,7 @@ while True:
     #Implementierung der Terminaleingabe 
     terminal_input = raw_input('Eingabe :')
 
-    #Ueberpruefung der Eingabe und Aufruf der entsprechenden Schreibdatei (wirte_Farbe)
+    #Ueberpruefung der Eingabe und Aufruf der entsprechenden Schreibdatei (write_Farbe)
     if terminal_input == "blau":
         print "Produkt blau: Bitte Transponder zum Beschreiben auf das Lesegerät halten"
         import write_blue
