@@ -7,21 +7,6 @@ import signal
 
 continue_reading = True
 
-#Ab hier kommen unsere Funktionen
-##########################################################################################
-################################################################################
-################################################################################
-def get_product(input):
-    print "Bin jetzt in der get_product Methode und lese folgendes aus:"
-    if input[0] == 25:
-        print "Juhu"
-
-
-##########################################################################################
-################################################################################
-################################################################################
-
-
 # Capture SIGINT for cleanup when the script is aborted
 def end_read(signal,frame):
     global continue_reading
@@ -71,13 +56,11 @@ while continue_reading:
         if status == MIFAREReader.MI_OK:
             # MIFAREReader.MFRC522_Read(8)
             data = MIFAREReader.MFRC522_Read(8)
-            get_product(data)
-            print type(data)
-            print type(data[0]), data[0]
-            data = str(data)
-            print type(data)
+            
             MIFAREReader.MFRC522_StopCrypto1()
-            print "Wir printen jetz: " + str(data)
+            
+            print "Folgende Werte sind derzeit auf dem Transponder gespeichert: \n", data
+            print "\n"
             
         else:
             print "Authentication error"
