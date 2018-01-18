@@ -59,7 +59,7 @@ while continue_reading:
             
             MIFAREReader.MFRC522_StopCrypto1()
             
-            print "Folgende Werte sind derzeit auf dem Transponder gespeichert: \n", data
+            print "Folgende Werte sind derzeit auf dem Transponder gespeichert: \n \t", data
             print "\n"
             
         else:
